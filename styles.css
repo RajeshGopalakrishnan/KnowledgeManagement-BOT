@@ -1,0 +1,281 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Main content layout */
+main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#categories {
+    list-style: none;
+}
+
+#categories li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#categories li:hover {
+    background-color: #f0f0f0;
+}
+
+#categories li.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.add-article-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-article-btn:hover {
+    background-color: #218838;
+}
+
+/* Articles grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.article-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article-card .category {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#articleForm input,
+#articleForm select,
+#articleForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#articleForm textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.form-buttons button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.form-buttons .cancel {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.form-buttons .cancel:hover {
+    background-color: #c82333;
+}
+
+/* Automation Tiles Styles */
+.automation-tile {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e1e8ed;
+    cursor: pointer;
+}
+
+.automation-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.tile-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.automation-tile h3 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.automation-tile p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.tile-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e1e8ed;
+    text-align: right;
+}
+
+.tile-footer small {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Back Button Styles */
+.back-button.automation-tile {
+    background-color: #f8f9fa;
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+.back-button.automation-tile:hover {
+    background-color: #e9ecef;
+    border-color: #666;
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        margin-bottom: 20px;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+} 

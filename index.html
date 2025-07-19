@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Knowledge Management</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search knowledge management...">
+            </div>
+        </header>
+        
+        <main>
+            <div class="sidebar">
+                <h2>Track</h2>
+                <ul id="categories">
+                    <li class="active">Automation</li>
+                    <li>SQA</li>
+                    <li>Validation</li>
+                    <li>Infra Qual</li>
+                    <li>Performance</li>
+                </ul>
+                <button id="addArticleBtn" class="add-article-btn">+ Add New Article</button>
+            </div>
+
+            <div class="content">
+                <div id="articlesList" class="articles-grid">
+                    <!-- Articles will be dynamically added here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Add Article Modal -->
+        <div id="addArticleModal" class="modal">
+            <div class="modal-content">
+                <h2>Add New Article</h2>
+                <form id="articleForm">
+                    <input type="text" id="articleTitle" placeholder="Article Title" required>
+                    <select id="articleCategory" required>
+                        <option value="">Select Track</option>
+                        <option value="Automation">Automation</option>
+                        <option value="SQA">SQA</option>
+                        <option value="Validation">Validation</option>
+                        <option value="Infra Qual">Infra Qual</option>
+                        <option value="Performance">Performance</option>
+                    </select>
+                    <textarea id="articleContent" placeholder="Article Content" required></textarea>
+                    <div class="form-buttons">
+                        <button type="submit">Save</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
